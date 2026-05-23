@@ -10,6 +10,12 @@ services:
       RABBITMQ_DEFAULT_PASS: app
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - dizertatie_shared_net
 
 volumes:
   rabbitmq_data:
+
+networks:
+  dizertatie_shared_net:
+    name: dizertatie_shared_net
